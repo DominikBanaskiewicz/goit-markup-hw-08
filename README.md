@@ -5,3 +5,5 @@ about-us - ukryte
 our-clients- gotowe prawie ( zawija liste troche powyzej 360 px na 1 kolumne )
 pozostało headre- zrobic menu applikacji
 footer backdrop-modal oraz portfolio do zrobienia od nowa
+
+pozostały zdjęcia jeszcze poza bannerem
