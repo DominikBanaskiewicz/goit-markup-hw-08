@@ -1,0 +1,114 @@
+@use "../utils/colors";
+@use "../utils/fonts";
+@use "../utils/mixins";
+
+.our-team {
+  background-color: colors.$our-team-backround-color;
+  &__img {
+    width: 100%;
+  }
+  &__title {
+    @include mixins.font-sizes(700, 36, 1.17);
+    color: colors.$almost-black-font-color;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  &__list {
+    column-gap: 30px;
+  }
+  &__elem {
+    background-color: colors.$white-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 16px;
+  }
+  &__box-title {
+    @include mixins.font-sizes(bold, 16, 1.17);
+    color: colors.$almost-black-font-color;
+  }
+  &__job {
+    @include mixins.font-sizes(400, 16, 1.17);
+    color: colors.$grey-brand-font-color;
+    text-align: center;
+  }
+  &__social-links-list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+  }
+  &__social-link {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background-color: colors.$white-color;
+    fill: colors.$our-team-social-link-fill;
+    &:hover {
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      fill: colors.$white-color;
+      background-color: colors.$brand-blue-color;
+      border-radius: 50%;
+    }
+  }
+  &__social-icon {
+    width: auto;
+    height: 20px;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 767px) {
+  .our-team {
+    &__title {
+      padding-bottom: 30px;
+    }
+    &__list {
+      column-gap: 30px;
+    }
+    &__elem {
+      padding-bottom: 24px;
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .our-team {
+    &__title {
+      padding-bottom: 30px;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 30px;
+      justify-content: center;
+    }
+    &__elem {
+      flex-basis: 44%;
+      width: auto;
+      height: auto;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .our-team {
+    &__list {
+      display: flex;
+      width: 1200px;
+    }
+    &__img {
+      width: 279px;
+    }
+  }
+}
