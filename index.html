@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
     <title>Document</title>
   </head>
-  <body class="body">
+  <body style class="body">
     <header class="header">
       <div class="container page-header">
         <nav class="nav">
@@ -37,6 +37,15 @@
             </li>
           </ul>
         </nav>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg>
+            <use href="./images/icons.svg#icon-mobile-menu"></use>
+          </svg>
+        </button>
         <ul class="contacts">
           <li class="contacts__elem">
             <a class="contacts__email" href="mailto:info@devstudio.com">
@@ -127,34 +136,76 @@
           <h2 class="about-us__title">Czym się zajmujemy</h2>
           <ul class="about-us__list">
             <li class="about-us__elem">
-              <img
-                src="images/czym-sie-zajmujemy1.jpg"
-                alt="work on computer"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/czym-sie-zajmujemy1.jpg   1x,
+                    ./images/czym-sie-zajmujemy1x2.jpg 2x
+                  "
+                />
+                <source
+                  srcset="
+                    ./images/czym-sie-zajmujemy1   1x,
+                    ./images/czym-sie-zajmujemy1x2 2x
+                  "
+                />
+                <img
+                  src="images/czym-sie-zajmujemy1.jpg"
+                  alt="work on computer"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <div class="about-us__img-box">
                 <span class="about-us__img-text">Aplikacje komputerowe</span>
               </div>
             </li>
             <li class="about-us__elem">
-              <img
-                src="images/czym-sie-zajmujemy2.jpg"
-                alt="computer and phone"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/czym-sie-zajmujemy2.jpg   1x,
+                    ./images/czym-sie-zajmujemy2x2.jpg 2x
+                  "
+                />
+                <source
+                  srcset="
+                    ./images/czym-sie-zajmujemy2   1x,
+                    ./images/czym-sie-zajmujemy2x2 2x
+                  "
+                />
+                <img
+                  src="images/czym-sie-zajmujemy2.jpg"
+                  alt="computer and phone"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <div class="about-us__img-box">
                 <span class="about-us__img-text">Aplikacje mobilne</span>
               </div>
             </li>
             <li class="about-us__elem">
-              <img
-                src="images/czym-sie-zajmujemy3.jpg"
-                alt="color and tablet"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/czym-sie-zajmujemy3.jpg   1x,
+                    ./images/czym-sie-zajmujemy3x2.jpg 2x
+                  "
+                />
+                <source
+                  srcset="
+                    ./images/czym-sie-zajmujemy3   1x,
+                    ./images/czym-sie-zajmujemy3x2 2x
+                  "
+                />
+                <img
+                  src="images/czym-sie-zajmujemy3.jpg"
+                  alt="color and tablet"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <div class="about-us__img-box">
                 <span class="about-us__img-text">Rozwiązania graficzne</span>
               </div>
@@ -168,11 +219,34 @@
           <h2 class="our-team__title">Nasz zespół</h2>
           <ul class="our-team__list">
             <li class="our-team__elem">
-              <img
-                class="our-team__img"
-                src="images/teamcard1.jpg"
-                alt="johns doe photo"
-              />
+              <picture class="our-team__picture">
+                <source
+                  srcset="
+                    images/mobile/teamcard1.jpg   1x,
+                    images/mobile/teamcard1x2.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    images/tablet/teamcard1.jpg   1x,
+                    images/tablet/teamcard1x2.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                   images/teamcard1.jpg 1x,
+                   images/teamcard1x2.jpg x2
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="our-team__img"
+                  src="images/teamcard1.jpg"
+                  alt="johns doe photo"
+                />
+              </picture>
               <div class="our-team__text-box">
                 <h3 class="our-team__box-title">Jon Doe</h3>
                 <p class="our-team__job">Product Designer</p>
@@ -209,11 +283,34 @@
               </ul>
             </li>
             <li class="our-team__elem">
-              <img
-                class="our-team__img"
-                src="images/teamcard2.jpg"
-                alt="johns doe photo"
-              />
+              <picture class="our-team__picture">
+                <source
+                  srcset="
+                    images/mobile/teamcard2.jpg   1x,
+                    images/mobile/teamcard2x2.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    images/tablet/teamcard2.jpg   1x,
+                    images/tablet/teamcard2x2.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                   images/teamcard2.jpg 1x,
+                   images/teamcard2x2.jpg x2
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="our-team__img"
+                  src="images/teamcard2.jpg"
+                  alt="johns doe photo"
+                />
+              </picture>
               <div class="our-team__text-box">
                 <h3 class="our-team__box-title">Jon Doe</h3>
                 <p class="our-team__job">Frontend Developer</p>
@@ -250,11 +347,34 @@
               </ul>
             </li>
             <li class="our-team__elem">
-              <img
-                class="our-team__img"
-                src="images/teamcard3.jpg"
-                alt="johns doe photo"
-              />
+              <picture class="our-team__picture">
+                <source
+                  srcset="
+                    images/mobile/teamcard3.jpg   1x,
+                    images/mobile/teamcard3x2.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    images/tablet/teamcard3.jpg   1x,
+                    images/tablet/teamcard3x2.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                   images/teamcard3.jpg 1x,
+                   images/teamcard3x2.jpg x2
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="our-team__img"
+                  src="images/teamcard3.jpg"
+                  alt="johns doe photo"
+                />
+              </picture>
               <div class="our-team__text-box">
                 <h3 class="our-team__box-title">Jon Doe</h3>
                 <p class="our-team__job">Marketing</p>
@@ -291,11 +411,34 @@
               </ul>
             </li>
             <li class="our-team__elem">
-              <img
-                class="our-team__img"
-                src="images/teamcard4.jpg"
-                alt="johns doe photo"
-              />
+              <picture class="our-team__picture">
+                <source
+                  srcset="
+                    images/mobile/teamcard4.jpg   1x,
+                    images/mobile/teamcard4x2.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    images/tablet/teamcard4.jpg   1x,
+                    images/tablet/teamcard4x2.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                   images/teamcard4.jpg 1x,
+                   images/teamcard4x2.jpg x2
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="our-team__img"
+                  src="images/teamcard4.jpg"
+                  alt="johns doe photo"
+                />
+              </picture>
               <div class="our-team__text-box">
                 <h3 class="our-team__box-title">Jon Doe</h3>
                 <p class="our-team__job">UI Designer</p>
@@ -583,6 +726,63 @@
         </div>
       </div>
     </div>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          class="menu-toggle__svg"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule=""
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+      <ul class="mobile-menu__lists">
+        <ul class="mobile-menu">
+          <li><a href="" class="mobile-menu__link">Agencja</a></li>
+          <li>
+            <a href="portfolio.html" class="mobile-menu__link">Portfolio</a>
+          </li>
+          <li><a href="" class="mobile-menu__link">Kontakt</a></li>
+        </ul>
+        <ul class="mobile-menu__contacts-list">
+          <li class="mobile-menu__contacts-elem">
+            <a class="mobile-menu__telephone" href="tel:+48111111111"
+              >+48 111 111 111</a
+            >
+          </li>
+          <li class="mobile-menu__contacts-elem">
+            <a class="mobile-menu__email" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+
+          <ul class="mobile-menu__social-list">
+            <li><a class="mobile-menu__social-link" href="">Instagram</a></li>
+            <span class="mobile-menu__social-link-line">|</span>
+            <li><a class="mobile-menu__social-link" href="">Twitter</a></li>
+            <span class="mobile-menu__social-link-line">|</span>
+            <li><a class="mobile-menu__social-link" href="">Facebook</a></li>
+            <span class="mobile-menu__social-link-line">|</span>
+            <li><a class="mobile-menu__social-link" href="">Linkedin</a></li>
+          </ul>
+        </ul>
+      </ul>
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

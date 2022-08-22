@@ -10,7 +10,85 @@
       rgba(47, 48, 58, 0.8),
       rgba(47, 48, 58, 0.8)
     ),
-    url(../images/main-baner-img.jpg);
+    url(../images/mobile/banner.jpg);
+}
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .banner {
+    background-color: colors.$background-dark-color;
+    background-size: 100%;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url(../images/mobile/banner2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner {
+    background-color: colors.$background-dark-color;
+    background-size: 100%;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url(../images/tablet/banner.jpg);
+  }
+}
+@media screen and(min-width:768px) and (min-device-pixel-ratio: 2),
+  screen and(min-resolution: 192dpi),
+  screen and(min-resolution: 2dppx) {
+  .banner {
+    background-color: colors.$background-dark-color;
+    background-size: 100%;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url(../images/mobile/banner2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner {
+    background-color: colors.$background-dark-color;
+    background-size: 100%;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url(../images/tablet/banner.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner {
+    background-color: colors.$background-dark-color;
+    background-size: 100%;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url(../images/banner.jpg);
+  }
+}
+@media screen and(min-width:1200px) and (min-device-pixel-ratio: 2),
+  screen and(min-resolution: 192dpi),
+  screen and(min-resolution: 2dppx) {
+  .banner {
+    background-color: colors.$background-dark-color;
+    background-size: 100%;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url(../images/banner2x.jpg);
+  }
 }
 
 @media screen and (min-width: 360px) and (max-width: 768px) {
@@ -128,6 +206,5 @@
 @media screen and (min-width: 1200px) {
   .main-content__list {
     display: flex;
-    width: 1200px;
   }
 }

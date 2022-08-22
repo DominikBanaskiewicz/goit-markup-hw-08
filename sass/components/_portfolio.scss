@@ -1,6 +1,5 @@
 @use "../utils/colors";
 @use "../utils/fonts";
-@use "./paddings.scss";
 @use "../utils/mixins";
 
 .portfolio-buttons {
@@ -35,9 +34,8 @@
     }
   }
 }
+
 .portfolio-items__item {
-  display: flex;
-  flex-direction: column;
   position: relative;
   overflow: hidden;
   margin-bottom: 30px;
@@ -48,31 +46,33 @@
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
 }
-.portfolio-item__text {
-  border-bottom: 1px solid #eee;
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
-  padding: 20px 24px;
-}
-.portfolio-item__name {
-  @include mixins.font-sizes(500, 16, 1.875);
-  text-decoration: none;
-  color: colors.$almost-black-font-color;
-}
-.portfolio-item__link {
-  text-decoration: none;
-  color: colors.$almost-black-font-color;
-}
-.portfolio-item__type {
-  @include mixins.font-sizes(400, 16, 1.2);
-  text-decoration: none;
-  color: colors.$grey-brand-font-color;
-}
-.portfolio-item__img {
-  max-width: 370px;
-  max-height: 294px;
-  width: 100%;
-  height: auto;
+.portfolio-item {
+  &__text {
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    padding: 20px 24px;
+  }
+  &__name {
+    @include mixins.font-sizes(500, 16, 1.875);
+    text-decoration: none;
+    color: colors.$almost-black-font-color;
+  }
+  &__link {
+    text-decoration: none;
+    color: colors.$almost-black-font-color;
+  }
+  &__type {
+    @include mixins.font-sizes(400, 16, 1.2);
+    text-decoration: none;
+    color: colors.$grey-brand-font-color;
+  }
+  &__img {
+    max-width: 370px;
+    max-height: 294px;
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* overlay portfolio-elems */
@@ -104,17 +104,24 @@
   color: colors.$white-color;
   width: 80%;
 }
+
+@media screen and (min-width: 360px) and (max-width: 479px) {
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .portfolio-items__list {
-    display: flex;
-    column-gap: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .portfolio-items__item {
-    padding: 10px;
-    flex-basis: 40%;
-    max-width: 354px;
+  .portfolio-items {
+    &__list {
+      display: flex;
+      flex-direction: row;
+      column-gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__item {
+      flex-basis: calc(50% - (2 * 30px));
+      max-width: 354px;
+    }
   }
 }
 @media screen and (min-width: 1200px) {
@@ -124,8 +131,11 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+  .portfolio-items__item {
+    flex-basis: calc(33% - (2 * 30px));
+  }
 
   .portfolio-item__img {
-    width: 370px;
+    max-width: 370px;
   }
 }

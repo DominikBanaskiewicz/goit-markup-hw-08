@@ -1,0 +1,91 @@
+@use "../utils/colors";
+@use "../utils/fonts";
+@use "../utils/mixins";
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: colors.$white-color;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: black;
+}
+
+.mobile-menu__lists {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  align-self: flex-start;
+}
+.mobile-menu__link {
+  @include mixins.font-sizes(500, 40, 1.17);
+  color: black;
+  text-decoration: none;
+  &:hover {
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: colors.$brand-blue-color;
+  }
+}
+.mobile-menu__contacts-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+.mobile-menu__contacts-elem {
+  text-decoration: none;
+}
+.mobile-menu__email,
+.mobile-menu__telephone {
+  text-decoration: none;
+  @include mixins.font-sizes(500, 24, 1.17);
+  color: colors.$grey-brand-font-color;
+  &:hover {
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: colors.$brand-blue-color;
+    cursor: pointer;
+  }
+}
+.mobile-menu__social-list {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 32px;
+}
+.mobile-menu__social-link {
+  text-decoration: none;
+  @include mixins.font-sizes(500, 18, 1.17);
+  color: colors.$brand-blue-color;
+  cursor: pointer;
+}
+.mobile-menu__social-link-line {
+  color: #21212133;
+}

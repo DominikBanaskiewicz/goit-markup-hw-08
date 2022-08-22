@@ -1,0 +1,110 @@
+@use "../utils/colors";
+@use "../utils/fonts";
+@use "../utils/mixins";
+.footer-newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  &__title {
+    text-transform: uppercase;
+    @include mixins.font-sizes(700, 14, 1.17);
+    color: colors.$white-color;
+  }
+  &__form-input {
+    @include mixins.font-sizes(400, 16, 1.875);
+    height: 50px;
+    width: 100%;
+    background-color: rgba(47, 48, 58, 1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    color: #eee;
+    outline: none;
+    padding-left: 20px;
+    letter-spacing: 1px;
+    &:focus {
+      border: none;
+      border: 1px solid colors.$white-color;
+    }
+  }
+  &__button {
+    height: 50px;
+    width: 200px;
+    margin-top: 20px;
+    background-color: colors.$brand-blue-color;
+    border: none;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.15);
+    padding: 0px;
+    &:hover {
+      cursor: pointer;
+    }
+    &-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+    }
+    &-svg {
+      fill: colors.$almost-white-color;
+      width: auto;
+      height: 20px;
+    }
+    &-text {
+      @include mixins.font-sizes(700, 16, 1.875);
+      color: colors.$white-color;
+      letter-spacing: 2px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  &__label {
+    width: 80%;
+  }
+}
+.footer-submit-email-label-and-button {
+  width: 90%;
+}
+@media screen and (min-width: 360px) and (max-width: 480px) {
+  .footer-newsletter {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .footer-newsletter {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-newsletter {
+    align-items: center;
+  }
+  .footer-submit-email-label-and-button {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-newsletter {
+    flex-basis: 49%;
+    align-items: stretch;
+
+    &__form {
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+      align-items: center;
+      width: 100%;
+    }
+    &__button {
+      margin-top: 0px;
+    }
+    &__title {
+      align-self: flex-start;
+    }
+  }
+}
