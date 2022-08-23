@@ -61,7 +61,8 @@
     border-radius: 50%;
     background-color: colors.$white-color;
     fill: colors.$our-team-social-link-fill;
-    &:hover {
+    &:hover,
+    &:focus {
       transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
       fill: colors.$white-color;
       background-color: colors.$brand-blue-color;
@@ -98,7 +99,7 @@
       justify-content: center;
     }
     &__elem {
-      flex-basis: calc(50% - 30px);
+      flex-basis: calc(50% - 15px);
       width: 100%;
     }
   }

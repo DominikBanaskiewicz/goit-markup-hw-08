@@ -78,6 +78,7 @@ ul {
   flex-direction: row;
   align-self: stretch;
   justify-content: space-between;
+  padding: 10px 0;
 }
 
 .nav__logo {
@@ -286,8 +287,11 @@ ul {
   color: black;
   text-decoration: none;
 }
-.mobile-menu__link:hover {
+.mobile-menu__link:hover, .mobile-menu__link:focus {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #2196f3;
+}
+.mobile-menu__link--blue {
   color: #2196f3;
 }
 
@@ -301,16 +305,28 @@ ul {
   text-decoration: none;
 }
 
-.mobile-menu__email,
-.mobile-menu__telephone {
+.mobile-menu__email {
   text-decoration: none;
   font-weight: 500;
   font-size: 24px;
   line-height: 1.17;
   color: #757575;
 }
-.mobile-menu__email:hover,
-.mobile-menu__telephone:hover {
+.mobile-menu__email:hover, .mobile-menu__email:focus {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #2196f3;
+  cursor: pointer;
+}
+
+.mobile-menu__telephone {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  color: #2196f3;
+  cursor: pointer;
+}
+.mobile-menu__telephone:hover, .mobile-menu__telephone:focus {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: #2196f3;
   cursor: pointer;
@@ -338,60 +354,67 @@ ul {
 .banner {
   background-color: #2f303a;
   background-size: 100%;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/mobile/banner.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile/banner.jpg);
 }
 
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .banner {
     background-color: #2f303a;
     background-size: 100%;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/mobile/banner2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile/banner2x.jpg);
   }
 }
 @media screen and (min-width: 768px) {
   .banner {
     background-color: #2f303a;
     background-size: 100%;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/tablet/banner.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/banner.jpg);
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .banner {
     background-color: #2f303a;
     background-size: 100%;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/mobile/banner2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile/banner2x.jpg);
   }
 }
 @media screen and (min-width: 768px) {
   .banner {
     background-color: #2f303a;
     background-size: 100%;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/tablet/banner.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/banner.jpg);
   }
 }
 @media screen and (min-width: 768px) {
   .banner {
     background-color: #2f303a;
     background-size: 100%;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/banner.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/banner.jpg);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .banner {
     background-color: #2f303a;
     background-size: 100%;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/banner2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/banner2x.jpg);
   }
 }
 @media screen and (min-width: 360px) and (max-width: 768px) {
   .banner {
-    padding: 118px 0;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/mobile/banner.jpg);
+    padding: 122px 0;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile/banner.jpg);
+  }
+  .banner__text {
+    padding-bottom: 30px;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1199px) {
   .banner {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/tablet/banner.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/banner.jpg);
+    padding: 125px 0;
+  }
+  .banner__text {
+    padding-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -456,6 +479,7 @@ ul {
   color: #757575;
   letter-spacing: 0.3px;
   max-width: 100%;
+  padding-bottom: 30px;
 }
 .main-content__icon-box {
   display: flex;
@@ -477,8 +501,12 @@ ul {
     justify-content: center;
   }
   .main-content__elem {
-    flex-basis: 47%;
+    flex-basis: calc(50% - 15px);
     width: 100%;
+  }
+  .main-content__elem__title {
+    text-transform: uppercase;
+    text-align: left;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -595,7 +623,7 @@ ul {
   background-color: #ffffff;
   fill: #afb1b8;
 }
-.our-team__social-link:hover {
+.our-team__social-link:hover, .our-team__social-link:focus {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: #ffffff;
   background-color: #2196f3;
@@ -628,7 +656,7 @@ ul {
     justify-content: center;
   }
   .our-team__elem {
-    flex-basis: calc(50% - 30px);
+    flex-basis: calc(50% - 15px);
     width: 100%;
   }
 }
@@ -678,6 +706,7 @@ ul {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  padding: 16px 0;
 }
 .our-clients__svg {
   width: 106px;
@@ -693,7 +722,7 @@ ul {
     padding-bottom: 30px;
   }
   .our-clients__elem {
-    flex-basis: calc(50% - 30px);
+    flex-basis: calc(50% - 15px);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -702,7 +731,7 @@ ul {
     margin: 60px 0px;
   }
   .our-clients__elem {
-    flex-basis: calc(33% - 60px);
+    flex-basis: calc(33.3333333333% - 20px);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -807,15 +836,28 @@ ul {
   .footer-newsletter {
     align-items: center;
   }
+  .footer-newsletter__label {
+    width: 100%;
+  }
+  .footer-submit-email-label-and-button {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .footer-newsletter {
     align-items: center;
   }
+  .footer-newsletter__label {
+    width: 100%;
+  }
+  .footer-submit-email-label-and-button {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer-newsletter {
     align-items: center;
+    padding-top: 60px;
   }
   .footer-submit-email-label-and-button {
     width: 70%;
@@ -838,6 +880,7 @@ ul {
   }
   .footer-newsletter__title {
     align-self: flex-start;
+    padding-top: 13px;
   }
 }
 .footer-social {
@@ -899,6 +942,11 @@ ul {
   cursor: pointer;
 }
 
+@media screen and (min-width: 1200px) {
+  .footer-social__title {
+    padding-top: 13px;
+  }
+}
 .section--padding60px {
   padding: 60px 0px;
 }
@@ -935,7 +983,6 @@ ul {
     align-items: flex-start;
   }
   .footer__contact {
-    flex-basis: 24%;
     margin: 0px auto;
     justify-content: center;
   }
@@ -948,6 +995,7 @@ ul {
   .footer--flex-direction {
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
   }
 }
 .portfolio-buttons {
@@ -1018,8 +1066,7 @@ ul {
   color: #757575;
 }
 .portfolio-item__img {
-  max-width: 370px;
-  max-height: 294px;
+  max-width: 450px;
   width: 100%;
   height: auto;
 }
@@ -1055,22 +1102,15 @@ ul {
   width: 80%;
 }
 
-@media screen and (min-width: 360px) and (max-width: 479px) {
-  .mobile-menu__link--blue {
-    color: #2196f3;
-  }
-}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .portfolio-items__list {
     display: flex;
-    flex-direction: row;
     column-gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
   }
   .portfolio-items__item {
-    flex-basis: calc(50% - 60px);
-    max-width: 354px;
+    flex-basis: calc(50% - 20px);
   }
 }
 @media screen and (min-width: 1200px) {

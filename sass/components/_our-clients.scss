@@ -34,6 +34,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    padding: 16px 0;
   }
   &__svg {
     width: 106px;
@@ -49,7 +50,7 @@
       padding-bottom: 30px;
     }
     &__elem {
-      flex-basis: calc(50% - (30px));
+      flex-basis: calc(50% - (15px));
     }
   }
 }
@@ -59,7 +60,7 @@
     padding: 0px;
     margin: 60px 0px;
     &__elem {
-      flex-basis: calc(33% - (2 * 30px));
+      flex-basis: calc(100% / 3 - 20px);
     }
   }
 }

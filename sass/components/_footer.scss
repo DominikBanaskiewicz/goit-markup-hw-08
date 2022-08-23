@@ -43,7 +43,6 @@
       align-items: flex-start;
     }
     &__contact {
-      flex-basis: 24%;
       margin: 0px auto;
       justify-content: center;
     }
@@ -58,6 +57,7 @@
     &--flex-direction {
       flex-direction: row;
       justify-content: space-between;
+      align-items: flex-start;
     }
   }
 }
