@@ -78,7 +78,7 @@ ul {
   flex-direction: row;
   align-self: stretch;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 10px 15px;
 }
 
 .nav__logo {
