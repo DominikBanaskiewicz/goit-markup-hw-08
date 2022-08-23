@@ -106,6 +106,9 @@
 }
 
 @media screen and (min-width: 360px) and (max-width: 479px) {
+  .mobile-menu__link--blue {
+    color: colors.$brand-blue-color;
+  }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
 }

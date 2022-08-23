@@ -1055,6 +1055,11 @@ ul {
   width: 80%;
 }
 
+@media screen and (min-width: 360px) and (max-width: 479px) {
+  .mobile-menu__link--blue {
+    color: #2196f3;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .portfolio-items__list {
     display: flex;
