@@ -16,90 +16,13 @@
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
   .banner {
-    background-color: colors.$background-dark-color;
-    background-size: 100%;
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../images/mobile/banner2x.jpg);
-  }
-}
-@media screen and (min-width: 768px) {
-  .banner {
-    background-color: colors.$background-dark-color;
-    background-size: 100%;
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../images/tablet/banner.jpg);
-  }
-}
-@media screen and(min-width:768px) and (min-device-pixel-ratio: 2),
-  screen and(min-resolution: 192dpi),
-  screen and(min-resolution: 2dppx) {
-  .banner {
-    background-color: colors.$background-dark-color;
-    background-size: 100%;
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../images/mobile/banner2x.jpg);
-  }
-}
-@media screen and (min-width: 768px) {
-  .banner {
-    background-color: colors.$background-dark-color;
-    background-size: 100%;
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../images/tablet/banner.jpg);
-  }
-}
-@media screen and (min-width: 768px) {
-  .banner {
-    background-color: colors.$background-dark-color;
-    background-size: 100%;
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../images/banner.jpg);
-  }
-}
-@media screen and(min-width:1200px) and (min-device-pixel-ratio: 2),
-  screen and(min-resolution: 192dpi),
-  screen and(min-resolution: 2dppx) {
-  .banner {
-    background-color: colors.$background-dark-color;
-    background-size: 100%;
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../images/banner2x.jpg);
+    background-image: url(../images/mobile/banner2x.jpg);
   }
 }
 
 @media screen and (min-width: 360px) and (max-width: 768px) {
   .banner {
     padding: 122px 0;
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../images/mobile/banner.jpg);
     &__text {
       padding-bottom: 30px;
     }
@@ -107,27 +30,29 @@
 }
 @media screen and (min-width: 769px) and (max-width: 1199px) {
   .banner {
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../images/tablet/banner.jpg);
+    background-image: url(../images/tablet/banner.jpg);
     padding: 125px 0;
     &__text {
       padding-bottom: 30px;
     }
   }
 }
+@media screen and(min-width:768px) and (min-device-pixel-ratio: 2),
+  screen and(min-resolution: 2dppx) {
+  .banner {
+    background-image: url(../images/tablet/banner2x.jpg);
+  }
+}
 @media screen and (min-width: 1200px) {
   .banner {
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.8),
-        rgba(47, 48, 58, 0.8)
-      ),
-      url(../images/banner.jpg);
+    background-image: url(../images/banner.jpg);
     padding: 200px 0;
+  }
+}
+@media screen and(min-width:1200px) and (min-device-pixel-ratio: 2),
+  screen and(min-resolution: 2dppx) {
+  .banner {
+    background-image: url(../images/banner2x.jpg);
   }
 }
 .banner__text {
@@ -137,10 +62,7 @@
   max-width: 385px;
   @include mixins.font-sizes(900, 26, 1.36);
 }
-@media screen and (min-width: 360px) and (max-width: 768px) {
-}
-@media screen and (min-width: 769px) and (max-width: 1199px) {
-}
+
 @media screen and (min-width: 1200px) {
   .banner__text {
     @include mixins.font-sizes(900, 44, 1.36);

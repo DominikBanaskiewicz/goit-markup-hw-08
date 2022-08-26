@@ -1,6 +1,5 @@
 @use "../utils/colors";
 @use "../utils/fonts";
-@use "./paddings.scss";
 @use "../utils/mixins";
 
 .page-header {
@@ -113,9 +112,8 @@
 .nav__logo--blue:hover,
 .contacts__email:hover,
 .contacts__phone:hover,
-.footer-email:hover,
-.footer-phone:hover,
-.header-contact-list-elem:hover {
+.contacts__email:focus,
+.contacts__phone:focus {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: colors.$brand-blue-color;
   cursor: pointer;
@@ -139,9 +137,6 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
-}
-
 .menu-toggle {
   height: 40px;
   width: 40px;
@@ -155,9 +150,8 @@
   cursor: pointer;
   border: none;
   outline: none;
-}
-
-.menu-toggle__svg:hover {
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  fill: colors.$brand-blue-color;
+  &__svg:hover {
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: colors.$brand-blue-color;
+  }
 }
