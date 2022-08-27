@@ -17,16 +17,7 @@
     justify-content: center;
   }
   &__elem {
-    width: 100%;
-    border: rgba(175, 177, 184, 1) 1px solid;
-    border-radius: 4px;
     fill: colors.$our-team-social-link-fill;
-    &:hover,
-    &:focus {
-      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      fill: colors.$brand-blue-color;
-      border: colors.$brand-blue-color 1px solid;
-    }
   }
   &__link {
     width: 100%;
@@ -36,6 +27,16 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 16px 0;
+    outline: none;
+    border: rgba(175, 177, 184, 1) 1px solid;
+    border-radius: 4px;
+    &:hover,
+    &:focus {
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      fill: colors.$brand-blue-color;
+      outline: none;
+      border: colors.$brand-blue-color 1px solid;
+    }
   }
   &__svg {
     width: 106px;
