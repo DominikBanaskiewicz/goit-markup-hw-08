@@ -1,2 +1,2 @@
 goit-markup-hw-08
-obrazy nie sa optymalizowane, pobrane z projektu w figmie
+obrazy zoptymalozowane, poprawiony main content oraz text align w our-team text box
