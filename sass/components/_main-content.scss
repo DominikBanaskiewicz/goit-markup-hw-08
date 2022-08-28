@@ -20,7 +20,7 @@
   }
 }
 
-@media screen and (min-width: 360px) and (max-width: 768px) {
+@media screen and (min-width: 360px) and (max-width: 767px) {
   .banner {
     padding: 122px 0;
     &__text {
@@ -28,7 +28,7 @@
     }
   }
 }
-@media screen and (min-width: 769px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .banner {
     background-image: url(../images/tablet/banner.jpg);
     padding: 125px 0;
